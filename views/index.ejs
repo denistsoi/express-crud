@@ -1,0 +1,24 @@
+<!-- views/index.ejs -->
+<!doctype html>
+<html>
+<head>
+    <title>Crud</title>
+</head>
+<body>
+  <div class="container">
+    <h1>hello world</h1>
+    <% for(var i=0; i<quotes.length; i++) {%>
+      <li>
+        <span><%= quotes[i].name %></span>
+        <span><%= quotes[i].quote %></span>
+      </li>
+    <% } %>
+
+    <form action="/quotes" method="POST">
+      <input type="text" placeholder="name" name="name">
+      <input type="text" placeholder="quote" name="quote">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
